@@ -1,0 +1,54 @@
+// Styles for section #services.
+
+.services {
+    .service-items {
+      padding: 99px 0 72px;
+      @media (min-width: 992px) {
+        [class*="col-md-"] {
+          max-width: 19%;
+          margin-right: 8%;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+        .service-item {
+          text-align: center;
+            .service-icon {
+              border: transparent;
+              border-radius: 50%;
+              color: #ffffff;
+              display: inline-block;
+              font-size: 28px;
+              height: 60px; 
+              margin-bottom: 22px;
+              padding-top: 8px; 
+              width: 61px; 
+            }
+            .service-icon-1 {
+              background: #f1c40f;
+            }
+            .service-icon-2 {
+              background: #0faff1;;
+            }
+            .service-icon-3 {
+              background: #95a5a6;;
+            }
+            .service-icon-4 {
+              background: #f1540f;
+            }
+            h6 {
+              color: #303030;
+              font-family: "Lato Heavy";
+              font-size: 18px;
+            }
+            p {
+              color: #7e7e7e;
+              font-family: "Lato Light";
+              font-size: 16px;
+              font-weight: 300;
+              line-height: 22.03px;
+            }
+        }
+    }
+}

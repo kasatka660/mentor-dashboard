@@ -1,0 +1,112 @@
+// Styles for footer.
+
+footer {
+  background-color: #2a2a2a;
+    .navbar {
+      padding: 15px 0 18px;
+      border-bottom: 1px solid #4a4a4a;
+        .navbar-brand {
+          width: 133px;
+          height: 29px;
+          background: url("../../images/footer-logo.png");
+        }
+        ul {
+          margin-top: 7px;
+            li {
+              padding-left: 28px;
+                a {
+                  color: #9e9e9e;
+                  font-size: 13px;
+                  font-weight: 500;
+                  text-transform: uppercase;        
+                }
+            }
+        }    
+    }
+    .footer__info {
+      color: #686868;
+      font-weight: 300;
+      font-family: "Lato-Light";
+      padding: 50px 0;
+      @media (max-width: 992px) {
+        padding: 20px;
+      }
+        .footer__text {
+          border-right: 1px solid #393939;
+
+        p {
+          
+          color: #686868;
+          letter-spacing: -0.2px;
+          line-height: 26px;
+          padding-right: 100px;
+          text-align: justify;
+            strong {
+              font-family: "Lato";
+              font-weight: 700;
+              line-height: 26px;
+            }
+        }
+        }
+       
+        .nav { 
+          
+          
+          display: inline-block;
+          width: 140px;
+          @media (min-width: 992px) {  
+            &.first-col {
+               margin-left: 85px;
+            }
+            &.second-col {
+               margin-left: 45px;
+            }
+          }
+          @media (max-width: 992px) {
+            margin-bottom: 20px;
+            width: 100%;
+          }
+            li {
+              a {
+                &.nav-link {
+                  color: #686868;
+                  padding: 3px 0;
+                    &:hover, &.active {
+                      color: #ffffff; 
+                      i {
+                        margin-right: 15px;
+                      }
+                    }
+                    i {
+                      margin-right: 5px;
+                    }
+                }
+              }
+          }
+        }
+        .contacts {
+          border-left: 1px solid #393939;
+          ul.contacts-list {
+            
+            list-style: none;
+            padding-left: 30px;
+            @media (max-width: 992px) {
+              margin-left: 0;
+            }
+              li {
+                  a {
+                    color: #686868;
+                    font-size: 15px;
+                    line-height: 29.12px;
+                  }
+                  i {
+                    margin-right: 5px;
+                      &.fa-phone {
+                        transform: rotate(90deg);
+                      }
+                  }
+              }
+          } 
+        }     
+    }
+}

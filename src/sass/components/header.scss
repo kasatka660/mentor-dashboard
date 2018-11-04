@@ -1,0 +1,97 @@
+// Styles for header.
+
+header {
+  background: url("../../images/header-bgr.png");
+  background-size: cover;
+    .container-overlay {
+      background-color: rgba(0, 0, 0, 0.83);
+          .navbar {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 4px;       
+            padding: 0;
+              .navbar-brand {
+                background: url("../../images/logo.png");
+                display: block;
+                height: 29px; 
+                margin-top: 0;   
+                width: 133px;
+              }
+              .nav-item {
+                margin-left: 60px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                position: relative;
+                bottom: -1px;
+                   &:hover, &.active {
+                    border-bottom: solid 1px #ffffff;
+                  }
+                  .nav-link {
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-right: 0;
+                  }
+              }
+          }
+      }
+      .homepage {
+        color: #ffffff;
+        padding: 337px 0 324px;
+        text-align: center;
+        @media (max-width: 992px) { 
+          padding: 137px 0 124px;
+        }
+          h2 {   
+            font-family: "Myriad Pro";
+            font-size: 69px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+          }
+          p {
+            font-family: Georgia;
+            font-size: 36px;
+            font-style: italic;
+            letter-spacing: 0.2px;
+            line-height: 47px;
+          }
+       }
+      .register {
+        overflow: hidden;
+          .button {  
+            padding: 44px 0 77px;
+            position: relative;
+            @media (min-width: 992px) {
+              transform: skewX(-13deg);
+            }
+              a {
+                color: #ffffff;
+                display: inline-block;
+                font-size: 22px;
+                font-weight: 500;
+                text-transform: uppercase;
+                @media (min-width: 992px) {
+                  position: absolute;
+                  transform: skewX(13deg);
+                }
+              }
+          }
+          .button-login {
+            background: #21424a;
+            @media (min-width: 992px) {
+              a {
+                right: 263px;
+              }
+            }
+          }
+          .button-register {
+            background: #2fac6c;
+            @media (min-width: 992px) {
+              a {
+                left: 250px;
+              }
+            }
+          }
+      }
+}

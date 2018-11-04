@@ -1,0 +1,55 @@
+
+@import 'variables/variables.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato-Heavy.ttf");
+}
+@font-face {
+  font-family: "Lato-Semibold";
+  src: url("../../fonts/Lato-Semibold.ttf");
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../../fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato-Black";
+  src: url("../../fonts/Lato-Black.ttf");
+}
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("../../fonts/Lato-Thin.ttf");
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("../../fonts/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../../fonts/Myriad Pro.otf");
+}
+
+
+@import 'layouts/layouts.scss';
+@import 'components/header.scss';
+@import 'components/domain.scss';
+@import 'components/pricing.scss';
+@import 'components/about-us.scss';
+@import 'components/comments.scss';
+@import 'components/services.scss';
+@import 'components/footer.scss';
+
+
+
+
+
+
+
+
+  

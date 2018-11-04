@@ -1,0 +1,52 @@
+// Styles for section #comments.
+
+.comments {
+  background: url("../../images/comments-bgr.png");
+  background-size: cover;
+  min-height: 190px;
+    .carousel-item {
+      color: #ffffff;
+      font-size: 20px;
+      padding: 48px 195px;
+      @media (max-width: 992px) {
+        padding: 20px 10px;
+      }
+      .comment__text {
+        font-family: "Lato Thin";
+        font-weight: 300;
+        line-height: 30px;
+        margin: auto;
+        max-width: 886px;
+        min-height: 49px;
+        text-align: center;
+      }
+      .comment__author {  
+        font-weight: 700;
+        line-height: 20px; 
+        bottom: -12px;
+        left: -36px;
+        position: relative;
+        text-align: center;
+      }
+    }
+    .carousel-indicators {
+      bottom: 40px;
+      left: 113px;
+      margin: 0;
+      @media (max-width: 992px) {
+        bottom: 12px;
+      }
+        li {
+          background: transparent;
+          border: 1px solid #ffffff;
+          border-radius: 50%;
+          height: 8px;
+          width: 8px;
+          margin: 0 9px 0 3px;
+          cursor: pointer;
+            &:hover, &.active  {
+              background: #ffffff;
+            }
+      }
+    }
+}
