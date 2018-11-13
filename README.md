@@ -1,1 +1,1 @@
-# Implementation of task "Ghost Host Page".
+# kasatka660-2018Q3.
