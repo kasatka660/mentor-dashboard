@@ -1,0 +1,90 @@
+// Styles for section #about-us.
+
+.about-us {
+  @media (min-width: 992px) {
+    .container {
+      padding: 0;
+    }
+  }
+    .about-us__text {
+      border-right: 2px dotted #d4d4d4;
+      margin: 104px 48px 100px 0;
+      padding-right: 99px;
+      @media (max-width: 992px) {
+        padding: 20px;
+        border: none;
+        margin: 0;
+      }
+        h3 {
+          color: #303030;
+          font-family: "Lato Black";
+          font-size: 35px;
+          font-weight: 900;
+          padding-bottom: 10px;
+            span {
+              font-family: "Lato Semibold";
+              font-weight: 600;
+            }
+        }
+        p {
+          color: #747474;
+          font-family: "Lato Thin";
+          font-size: 18px;
+          letter-spacing: -0.2px;
+          line-height: 27.08px;
+          text-align: justify;
+        }
+    }
+    .designers {
+      padding-top: 107px;
+      @media (max-width: 992px) {
+        padding-top: 0;
+        .designer {
+          margin-bottom: 20px;
+        }
+      }
+      @media (min-width: 992px) {
+        [class*="col-md-"] {
+          max-width: 22%;
+          margin-right: 15%;
+          &:last-child {
+            margin-right: 0;
+            max-width: 24%;
+          }
+        }
+      }
+        .designer {
+          text-align: center;
+          img {
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            width: 102px;
+          }
+          .designer__info {
+            color: #8e8e8e;
+            padding-top: 9px;
+              .designer__name {
+                color: #303030;
+                font-family: "Lato Semibold";
+                font-size: 17px;
+              }
+              .designer__contacts {
+                padding-top: 4px;
+                a {
+                    color: #bfbfbf;
+                    margin: 0 9px;
+                  i {                 
+                    font-size: 14px;
+                      &.fa-link {
+                        transform: rotate(90deg);
+                      }
+                  }
+                  &:hover, &:focus {
+                    color: #1f89ba;
+                  }
+                }
+              }
+          }
+        }
+    }
+}

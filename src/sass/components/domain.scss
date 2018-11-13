@@ -1,0 +1,118 @@
+// Styles for section #domain.
+
+.domain {
+  padding: 88px 0 90px;
+    h4 {
+      color: #383737;
+      font-family: "Lato Heavy";
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+    p {
+      color: #a2a2a2;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+      margin-bottom: 45px;
+      text-align: center;     
+    }
+    .domain-search {
+      padding: 0 39px;
+        .input-group {
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          height: 50px;
+          margin-bottom: 40px;
+            .input-group-prepend { 
+              border-radius: 2px;
+              border-right: none;
+                .input-group-text {
+                  background: #ffffff;
+                  border: none;
+                  padding: 8px 10px;
+                  color: #cbcbcb;
+                  font-size: 16px;
+                  font-weight: 400;
+                }
+            }
+            input.form-control {
+              border: none;
+              border-left: 1px solid rgba(0, 0, 0, 0.15); 
+              border-right: 1px solid rgba(0, 0, 0, 0.15);
+              color: #868686;
+              font-family: "Lato-Semibold";
+              font-size: 15px;
+              font-weight: 400;
+              margin: 9px 13px 9px 8px;
+                &:focus {
+                  box-shadow: none;
+                }
+            }
+            .input__btn {
+              background: transparent;
+              border-radius: 2px;
+              border: none;
+              color: #cbcbcb;
+              font-size: 16px;
+              padding: 8px 13px;
+                &:focus {
+                  box-shadow: none;
+                }
+            }
+        }
+        .pricelist {
+          border: 1px solid #dddddd;
+          padding: 14px 0px 3px;
+            ul {   
+              text-align: center;
+              margin-bottom: 5px;
+                li {
+                  border-bottom: 1px solid #dddddd;
+                  padding: 0 10px 5px;
+                  display: inline-block;
+                  width: 24%;
+                  margin-right: 5px;
+                    span {    
+                      border-right: 1px solid #ddd;
+                      color: #cbcbcb;
+                      display: block;
+                      font-size: 14px;
+                      font-weight: 400;
+                      padding: 28px 0;
+                      position: relative;
+                      left: 15px;
+                      text-align: center;
+                    }
+                  &:last-child {
+                    margin-right: 0;
+                    span {
+                      border: none;
+                    }
+                  }
+                 }
+              &.no-border li {
+                border-bottom: none;
+              }
+            }
+          @media (max-width: 992px) {
+            ul {
+              &:last-child {
+                border-top: 1px solid #dddddd;
+              }
+                li {
+                  display: block;
+                  width: auto;
+                  margin: 0;
+                  padding: 0;
+                  border: none;
+                  text-align: center;
+                  span {
+                    border: none;
+                    position: static;
+                  }
+                }
+            }
+          }
+        }
+    }
+}
