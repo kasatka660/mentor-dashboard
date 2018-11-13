@@ -1,1 +1,1 @@
-# kasatka660-2018Q3.
+# kasatka660-2018Q3
