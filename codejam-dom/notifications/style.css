@@ -1,0 +1,77 @@
+
+.message-box {
+  background: #ffffff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+  padding: 20px;
+	position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 350px;
+}
+
+.message-content {
+  border: solid #000000 1px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  text-align: justify;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+button.close {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 20px;
+  padding: 6px 10px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+button.display {
+  background: #ffffff;
+  border: solid  rgba(0, 0, 0, 0.3) 1px;
+  border-radius: 50%;
+  box-shadow: none;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+
+.display-left { 
+  left: 185px;
+}
+
+.display-right {
+  right: 45px;
+}
+
+.circles-container {
+  position: relative;
+  left: 193px;
+  bottom: 20px;
+  text-align: center;
+  width: 105px;
+}
+
+.circle {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin: 3px;
+  width: 8px;
+}
+
+.circle.active {
+  background:  #0099ff;
+}
+
+.hidden {
+  display: none;
+}
