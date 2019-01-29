@@ -1,0 +1,46 @@
+.modal {
+  animation: changeOpacity 1s;
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffff;
+    color: white;
+      .modal-header {
+        border: none; 
+          button.close {
+            color: white;
+          }      
+          h5.modal-title {
+            text-align: center;
+            width: 100%;
+          }
+      }
+      .modal-body {
+        padding: 20px 60px;
+      }
+      .modal-footer {
+        border: none;
+        justify-content: center;
+          .btn.btn-submit {
+            background-color: #990000;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 10px 20px;
+          }
+      }
+  }
+}
+
+.btn.btn-primary.start-game-btn {
+  background-color: #990000;
+  border: none;
+  display: block;
+  font-weight: 600;
+  margin: 250px auto;
+  padding: 25px 40px;
+  text-transform: uppercase;  
+}
+
+
+
+
+

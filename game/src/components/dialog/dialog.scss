@@ -1,0 +1,52 @@
+.btn.btn-primary.start-dialog-btn { 
+  background-color: #990000;
+  border: none;
+  display: block;
+  font-weight: 600;
+  margin: 150px auto;
+  padding: 25px 40px;
+  text-transform: uppercase; 
+  animation: rotateBtn 2s;
+}
+
+.modal {
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffff;
+    color: white;
+      .modal-header {
+        border: none; 
+          h5.modal-title {
+            text-align: center;
+            width: 100%;
+          }
+      }
+      .modal-body {
+        padding: 20px 60px;
+          .btn {
+            background-color: #990000;
+            color: #ffffff;
+            font-weight: 600;
+            &:focus, &:not(:disabled):not(.disabled):active,  {
+              background-color: #990000;
+              border-color: #990000;
+            }
+            &.selected {
+              background-color: #330099;
+            }
+          }
+      }
+  }
+}
+
+@keyframes rotateBtn {
+  30% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

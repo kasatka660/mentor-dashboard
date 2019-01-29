@@ -1,0 +1,43 @@
+.player-hitting {
+  animation: moveJellyfish 3s ease-in,
+             transformJellyfish 3s;
+  position: absolute;
+  width: 80px;
+  top: 150px;
+  left: 370px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes moveJellyfish {
+  from {
+    left: 370px;
+    top: 150px;
+  }
+  to {
+    left: -330px;
+  }
+}
+
+@keyframes transformJellyfish {
+  20% {
+ transform: scale(1.5);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.5);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0.9) ;
+  }
+  100% {
+    transform: scale(0);
+  }
+}

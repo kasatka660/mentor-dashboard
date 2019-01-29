@@ -1,0 +1,65 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background: url('./../src/images/underwater_home.jpg');
+  background-size: cover;
+}
+
+h3 {
+  text-align: center;
+}
+
+.container {
+  margin-top: 80px;
+}
+
+.container {
+  .btn {
+    &:focus, &:not(:disabled):not(.disabled):active,  {
+      background-color: #990000;
+      border-color: #990000;
+      box-shadow: none;
+    }
+  }
+}
+
+.btn { 
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+table + #newGameBtn {
+  margin: 50px auto;
+} 
+
+
+/* Animation. */
+
+@keyframes changeOpacity {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes moveCharacters {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+ 
+}

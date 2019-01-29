@@ -1,0 +1,40 @@
+.monster-hitting {
+  animation: moveStarfish 3s ease-in,
+             rotateStarfish 3s;
+  position: absolute;
+  width: 80px;
+  top: 120px;
+  left: -130px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes moveStarfish {
+  from {
+    left: -140px;
+    top: 120px;
+  }
+  to {
+    left: 450px;
+  }
+}
+
+@keyframes rotateStarfish {
+  20% {
+    transform: rotate(180deg) scale(0.8);
+  }
+  40% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  60% {
+    transform: rotate(540deg) scale(1.5);
+  }
+  80% {
+    transform: rotate(720deg) scale(1.0);
+  }
+  100% {
+    transform: rotate(900deg) scale(0.7);
+  }
+}  

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+.header {
+	background: url('./../src/images/underwater_landing.jpg');
+  background-size: cover;
+  padding: 300px;
+}
+
+nav {
+  background-color: #330099;
+}
+
+nav li a {
+  color: #ffffff;
+}
+
+.nav-item {
+  padding: 0 20px;
+}
+
+.heading {
+  color: #ffffff;
+}
+
+.heading .btn {
+  float: right;
+  display: block; 
+  background-color: #330099;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 15px 30px;
+}
+
+.screenshot {
+  max-width: 100%;
+}
+
+p.game-info {
+  font-family: 'Indie Flower', cursive;
+  padding: 20px 100px;
+  margin: 20px 100px 50px;
+  font-size: 18px;
+  border: 3px solid gray;
+}
+
+p.author-info {
+  font-size: 18px;
+}
+
+.container {
+  margin-top: 50px;
+  
+}
+
+h2 {
+  padding: 20px 0;
+}
+
+.col-4 {
+  padding: 20px;
+}
