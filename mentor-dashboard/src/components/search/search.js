@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-
+import './search.css'
 
 
 class Search extends Component {
@@ -12,7 +12,6 @@ class Search extends Component {
     this.handleChange = (selectedOption) => {
       this.setState({ selectedOption });
       this.props.updateMentor(selectedOption.value);
-      console.log(`Option selected:`, selectedOption);
     }
   }
 

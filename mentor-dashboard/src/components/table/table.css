@@ -1,0 +1,24 @@
+th.empty {
+  background: none;
+  border-top-color: white;
+}
+
+.checked {
+  background: #66ff66;
+}
+
+.to-do {
+  background: #999999;
+}
+
+.in-progress {
+  background: #ccff66;
+}
+
+.checking {
+  background: #ff99cc;
+}
+
+.no-result {
+  background: #660000;
+}

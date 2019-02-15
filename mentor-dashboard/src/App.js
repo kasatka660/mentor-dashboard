@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import ReactLoading from 'react-loading';
 import './App.css';
-import Table from './components/table.js';
-import Search from './components/search.js';
+import Table from './components/table/table';
+import Search from './components/search/search';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +12,6 @@ class App extends Component {
       selectedMentor: null
     }
   }
-
   componentDidMount() {
     setTimeout( () => fetch('./input.json')
       .then(response => response.json())
@@ -23,7 +22,7 @@ class App extends Component {
       return (
         <Fragment>
           <Search mentorsList = {Object.keys(this.state.json.pairs)} updateMentor = {this.updateSelectedMentor.bind(this)}/>
-          <Table /> 
+          <Table selectedMentor = {this.state.selectedMentor} json = {this.state.json}/> 
         </Fragment>
       );
     } else {
@@ -33,11 +32,8 @@ class App extends Component {
     }
   }
   updateSelectedMentor(newMentor) {
-    this.setState({selectedMentor: newMentor})
-    console.log(newMentor);
+    this.setState({selectedMentor: newMentor});
   }
 }
-
-
 
 export default App;

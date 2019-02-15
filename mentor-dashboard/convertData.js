@@ -26,8 +26,9 @@ const checkGithub = (item => {
   }
 });
 
-const tasks = tasksFile[0].data.map(item => {
+const tasksList = tasksFile[0].data.slice(1).map(item => {
   return {
+    id: item[0].trim().toLowerCase().replace(/[^a-z0-9]/gi,''),
     task: item[0], 
     status: item[2] 
   }
@@ -48,7 +49,29 @@ score.map(item => {
     if (!scoreByStudent[item.student]) {
      scoreByStudent[item.student] = [];
     }
-    scoreByStudent[item.student].push({task: item.task, score: item.score});
+    scoreByStudent[item.student].push({
+      id:item.task.trim().toLowerCase().replace(/[^a-z0-9]/gi,''), 
+      task: item.task, 
+      score: item.score
+    });
+  }
+})
+
+let tasksFromScore = [];
+Object.keys(scoreByStudent).map(key => {
+  scoreByStudent[key].map(item => {
+    tasksFromScore.push({
+      id: item.id,
+      task: item.task
+    });
+  });
+});
+const uniqTasksFromScore = _.uniqBy(tasksFromScore, 'id');
+
+
+uniqTasksFromScore.map(item => {
+  if (!tasksList.find(task => task.id == item.id )) {
+    tasksList.push(item);
   }
 })
 
@@ -79,20 +102,19 @@ let groupsByMentor = _.invertBy(pairs)
 
 const resultObj = {
   pairs: groupsByMentor,
-  score: scoreByStudent
+  score: scoreByStudent,
+  tasks: tasksList
 }
 
 const result = JSON.stringify(resultObj);
 
 
 var fs = require('fs')
-fs.writeFile ("input.json", JSON.stringify(resultObj), function(err) {
+fs.writeFile ("public/input.json", JSON.stringify(resultObj), function(err) {
   if (err) throw err;
     console.log('complete');
-  }
-);
+});
 
-;
 
 
 
