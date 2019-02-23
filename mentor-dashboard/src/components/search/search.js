@@ -7,14 +7,14 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     selectedOption: null,
+     selectedOption: props.selectedMentor
     }
     this.handleChange = (selectedOption) => {
       this.setState({ selectedOption });
       this.props.updateMentor(selectedOption.value);
+      localStorage.setItem('mentor', selectedOption.value);
     }
   }
-
   render() {
     const { selectedOption } = this.state;
     const options = this.props.mentorsList.map(item => {
@@ -28,6 +28,7 @@ class Search extends Component {
         value={selectedOption}
         onChange={this.handleChange}
         options={options}
+        defaultInputValue={this.props.selectedMentor}
       />
     );
   }

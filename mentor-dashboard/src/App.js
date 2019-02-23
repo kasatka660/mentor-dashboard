@@ -3,6 +3,8 @@ import ReactLoading from 'react-loading';
 import './App.css';
 import Table from './components/table/table';
 import Search from './components/search/search';
+import Login from './components/login/login';
+
 
 class App extends Component {
   constructor(props) {
@@ -15,13 +17,15 @@ class App extends Component {
   componentDidMount() {
     setTimeout( () => fetch('./input.json')
       .then(response => response.json())
-      .then(data => this.setState({ json: data })), 500)	
+      .then(data => this.setState({ json: data, selectedMentor: localStorage.getItem('mentor')})), 500)
+      console.log(localStorage.getItem('mentor'))	
   }
   render() {
     if (this.state.json) {
       return (
         <Fragment>
-          <Search mentorsList = {Object.keys(this.state.json.pairs)} updateMentor = {this.updateSelectedMentor.bind(this)}/>
+          <Login mentorLogin = {this.displayMentorByLogin.bind(this)} />
+          <Search mentorsList = {Object.keys(this.state.json.pairs)} updateMentor = {this.updateSelectedMentor.bind(this)} selectedMentor = {this.state.selectedMentor}/>
           <Table selectedMentor = {this.state.selectedMentor} json = {this.state.json}/> 
         </Fragment>
       );
@@ -33,6 +37,22 @@ class App extends Component {
   }
   updateSelectedMentor(newMentor) {
     this.setState({selectedMentor: newMentor});
+  }
+  displayMentorByLogin(data) {
+    console.log(data)
+    const url = 'https://mentor-dashboard-kasatka660.herokuapp.com/authenticate/'+data.code;
+    let userUrl = 'https://api.github.com/user?access_token='
+    fetch(url) 
+      .then(response => response.json())
+      .then(data => {  
+        console.log('Request succeeded with JSON response', data.token);  
+        fetch(userUrl + data.token)
+          .then(response => response.json())
+          .then(data => this.setState({selectedMentor: data.login}));
+      })  
+      .catch(function (error) {  
+        console.log('Request failed', error);  
+      });
   }
 }
 

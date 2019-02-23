@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './table.css';
+import Note from './../note/note';
 
 const Table = (props) => {
-  if (props.selectedMentor) {
+  if (props.selectedMentor && props.json){
     const mentor = props.selectedMentor;
     const json = props.json;
     const students = json.pairs[mentor];
     const tasks = json.tasks;
     const score = json.score;
-    console.log(score)
     const studentNames = students.map(student => {
       return (
         <th scope="col">{student}</th>
@@ -31,17 +31,22 @@ const Table = (props) => {
       )
     })
     return (
-      <table className="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col" className="empty"></th>
-            {studentNames}
-          </tr>
-        </thead>
-        <tbody>
-        {scoreForTasks}
-        </tbody>
-      </table>
+      <Fragment>
+        <div className="container">
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col" className="empty"></th>
+                {studentNames}
+              </tr>
+            </thead>
+            <tbody>
+            {scoreForTasks}
+            </tbody>
+          </table>
+        </div>
+        <Note />
+      </Fragment>
     );
   } else {
     return '';
@@ -54,21 +59,17 @@ const getClassNameByStatus = (status) => {
   switch (status) {
     case 'Checked': {
       return 'no-result';
-      break;
     }
     case 'Checking': {
       return 'checking';
-      break;
     }
     case 'ToDo': {
       return 'to-do';
-      break;
     } 
     case 'In Progress': {
       return 'in-progress';
-      break;
     }
     default:
-       return 'no-result';
+      return 'no-result';
   }
 }
