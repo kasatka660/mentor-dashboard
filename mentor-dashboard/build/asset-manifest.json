@@ -1,13 +1,13 @@
 {
-  "main.css": "/mentor-dashboard/mentor-dashboard/static/css/main.44ed56d6.chunk.css",
-  "main.js": "/mentor-dashboard/mentor-dashboard/static/js/main.4ecf9fc4.chunk.js",
-  "main.js.map": "/mentor-dashboard/mentor-dashboard/static/js/main.4ecf9fc4.chunk.js.map",
-  "static/js/1.b2d15a78.chunk.js": "/mentor-dashboard/mentor-dashboard/static/js/1.b2d15a78.chunk.js",
-  "static/js/1.b2d15a78.chunk.js.map": "/mentor-dashboard/mentor-dashboard/static/js/1.b2d15a78.chunk.js.map",
-  "runtime~main.js": "/mentor-dashboard/mentor-dashboard/static/js/runtime~main.e4e1bd46.js",
-  "runtime~main.js.map": "/mentor-dashboard/mentor-dashboard/static/js/runtime~main.e4e1bd46.js.map",
-  "static/css/main.44ed56d6.chunk.css.map": "/mentor-dashboard/mentor-dashboard/static/css/main.44ed56d6.chunk.css.map",
-  "index.html": "/mentor-dashboard/mentor-dashboard/index.html",
-  "precache-manifest.f311bf54f8347c84a164b7aea6ebbbf5.js": "/mentor-dashboard/mentor-dashboard/precache-manifest.f311bf54f8347c84a164b7aea6ebbbf5.js",
-  "service-worker.js": "/mentor-dashboard/mentor-dashboard/service-worker.js"
+  "main.css": "/mentor-dashboard/mentor-dashboard/build/static/css/main.44ed56d6.chunk.css",
+  "main.js": "/mentor-dashboard/mentor-dashboard/build/static/js/main.5dae5dfa.chunk.js",
+  "main.js.map": "/mentor-dashboard/mentor-dashboard/build/static/js/main.5dae5dfa.chunk.js.map",
+  "static/js/1.b2d15a78.chunk.js": "/mentor-dashboard/mentor-dashboard/build/static/js/1.b2d15a78.chunk.js",
+  "static/js/1.b2d15a78.chunk.js.map": "/mentor-dashboard/mentor-dashboard/build/static/js/1.b2d15a78.chunk.js.map",
+  "runtime~main.js": "/mentor-dashboard/mentor-dashboard/build/static/js/runtime~main.47c49239.js",
+  "runtime~main.js.map": "/mentor-dashboard/mentor-dashboard/build/static/js/runtime~main.47c49239.js.map",
+  "static/css/main.44ed56d6.chunk.css.map": "/mentor-dashboard/mentor-dashboard/build/static/css/main.44ed56d6.chunk.css.map",
+  "index.html": "/mentor-dashboard/mentor-dashboard/build/index.html",
+  "precache-manifest.a5920b7172ace34496dca9bb3fb55317.js": "/mentor-dashboard/mentor-dashboard/build/precache-manifest.a5920b7172ace34496dca9bb3fb55317.js",
+  "service-worker.js": "/mentor-dashboard/mentor-dashboard/build/service-worker.js"
 }
