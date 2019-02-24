@@ -18,7 +18,6 @@ class App extends Component {
     setTimeout( () => fetch('./input.json')
       .then(response => response.json())
       .then(data => this.setState({ json: data, selectedMentor: localStorage.getItem('mentor')})), 500)
-      console.log(localStorage.getItem('mentor'))	
   }
   render() {
     if (this.state.json) {
@@ -39,19 +38,17 @@ class App extends Component {
     this.setState({selectedMentor: newMentor});
   }
   displayMentorByLogin(data) {
-    console.log(data)
     const url = 'https://mentor-dashboard-kasatka660.herokuapp.com/authenticate/'+data.code;
     let userUrl = 'https://api.github.com/user?access_token='
     fetch(url) 
       .then(response => response.json())
-      .then(data => {  
-        console.log('Request succeeded with JSON response', data.token);  
+      .then(data => {
         fetch(userUrl + data.token)
           .then(response => response.json())
           .then(data => this.setState({selectedMentor: data.login}));
       })  
       .catch(function (error) {  
-        console.log('Request failed', error);  
+        throw error;  
       });
   }
 }

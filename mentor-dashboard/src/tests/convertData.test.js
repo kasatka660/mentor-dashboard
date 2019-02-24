@@ -10,7 +10,6 @@ import {
   expectedMentors,
   expectedGroupsByMentor } from './dataForTest.js';
 import xlsx from 'node-xlsx';
-import path from 'path';
 
 const scoreFile = xlsx.parse(`${__dirname}/test-xmls/Mentor_score.xlsx`);
 const pairsFile = xlsx.parse(`${__dirname}/test-xmls/Mentor-students-pairs.xlsx`);

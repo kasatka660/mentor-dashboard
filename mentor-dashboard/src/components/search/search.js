@@ -15,6 +15,7 @@ class Search extends Component {
       localStorage.setItem('mentor', selectedOption.value);
     }
   }
+
   render() {
     const { selectedOption } = this.state;
     const options = this.props.mentorsList.map(item => {
@@ -28,7 +29,9 @@ class Search extends Component {
         value={selectedOption}
         onChange={this.handleChange}
         options={options}
+        defaultValue={options.find(item => item.value == this.props.selectedMentor)}
         defaultInputValue={this.props.selectedMentor}
+        selectValue={this.props.selectedMentor}
       />
     );
   }

@@ -7,14 +7,17 @@ const Table = (props) => {
     const mentor = props.selectedMentor;
     const json = props.json;
     const students = json.pairs[mentor];
+    if (!students) {
+      return 'Studends not found';
+    }
     const tasks = json.tasks;
     const score = json.score;
-    const studentNames = students.map(student => {
+    const studentNames = students.map((student, key) => {
       return (
-        <th scope="col">{student}</th>
+        <th scope="col" key={key}>{student}</th>
       )
     });
-    const scoreForTasks = tasks.map(task => {
+    const scoreForTasks = tasks.map((task, key) => {
       const allStudentScore = students.map((student, key) => {
         if (score[student]) {
           const studentScore = score[student].find(item => {
@@ -24,10 +27,10 @@ const Table = (props) => {
             return <td className="checked" key={key}>{studentScore.score}</td>
           }
         }
-        return <td className={getClassNameByStatus(task.status)}></td>
+        return <td className={getClassNameByStatus(task.status)} key={key}></td>
       })
       return (
-        <tr><th scope="row">{task.task}</th>{allStudentScore}</tr>
+        <tr key={key}><th scope="row">{task.task}</th>{allStudentScore}</tr>
       )
     })
     return (

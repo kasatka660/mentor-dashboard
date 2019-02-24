@@ -1,7 +1,7 @@
 export const githubsToCheck = [ 'TatsianaKhinevich-EPAM', 
-                								'https://github.com/asharapa', 
-                								'https://github.com/rolling-scopes-school/zerovers-2018Q3', 
-                								'https://github.com/torchik-slava/'];
+                                'https://github.com/asharapa', 
+                                'https://github.com/rolling-scopes-school/zerovers-2018Q3', 
+                                'https://github.com/torchik-slava/'];
 export const githubsChecked = [ 'TatsianaKhinevich-EPAM', 
                                 'asharapa', 
                                 'zerovers', 
