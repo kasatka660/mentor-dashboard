@@ -17,7 +17,7 @@ class App extends Component {
   componentDidMount() {
     setTimeout( () => fetch('./input.json')
       .then(response => response.json())
-      .then(data => this.setState({ json: data, selectedMentor: localStorage.getItem('mentor')})), 500)
+      .then(data => this.setState({ json: data, selectedMentor: localStorage.getItem('mentor') ? localStorage.getItem('mentor') : ''})), 500)
   }
   render() {
     if (this.state.json) {
