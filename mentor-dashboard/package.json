@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.0",
+    "esm": "^3.2.6",
     "lodash": "^4.17.11",
     "node-xlsx": "^0.14.1",
     "react": "^16.7.0",
@@ -14,12 +15,11 @@
     "react-select": "^2.3.0"
   },
   "scripts": {
-    "start": "node convertData.js && react-scripts start",
+    "start": "node -r esm convertData.js && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "node": "node convertData.js",
-    "jest": "jest"
+    "node": "node -r esm convertData.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,8 +31,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "jest": "^24.1.0"
+    "@babel/preset-env": "^7.3.1"
   }
 }
-
-
