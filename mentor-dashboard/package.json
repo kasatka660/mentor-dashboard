@@ -35,5 +35,5 @@
   "devDependencies": {
     "@babel/preset-env": "^7.3.1"
   },
-  "homepage": "https://kasatka660.github.io/mentor-dashboard/mentor-dashboard/"
+  "homepage": "https://kasatka660.github.io/mentor-dashboard/mentor-dashboard/build/"
 }

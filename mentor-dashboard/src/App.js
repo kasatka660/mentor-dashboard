@@ -45,7 +45,10 @@ class App extends Component {
       .then(data => {
         fetch(userUrl + data.token)
           .then(response => response.json())
-          .then(data => this.setState({selectedMentor: data.login}));
+          .then(data => {
+            this.setState({selectedMentor: data.login})
+            localStorage.setItem('mentor', data.login);
+          });
       })  
       .catch(function (error) {  
         throw error;  
